@@ -65,7 +65,7 @@ fun HomeView(
         floatingActionButton = {
             FloatingActionButton(
                 modifier = Modifier.padding(20.dp),
-                containerColor = Color.Black,
+                containerColor = colorResource(R.color.teal_700),
                 contentColor = Color.White,
                 onClick = {
                     navController.navigate(Screen.AddWishScreen.route + "/0L")
