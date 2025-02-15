@@ -19,6 +19,7 @@ class WishViewModel(
 
     var wishTitleState by mutableStateOf("")
     var wishDescriptionState by mutableStateOf("")
+    var wishImportantState by mutableStateOf(false)
 
     fun onWishTitleChange(newTitle: String) {
         wishTitleState = newTitle
@@ -28,14 +29,19 @@ class WishViewModel(
         wishDescriptionState = newTitle
     }
 
+    fun onWishImportantChange(newImportant: Boolean) {
+        wishImportantState = newImportant
+    }
+
     lateinit var getAllWishes: Flow<List<Wish>> //= wishRepository.getAllWishes()
 
     init {
         viewModelScope.launch {
-            getAllWishes = wishRepository.getAllWishes().map {
-                it.sortedByDescending { wish ->
-                    wish.id
-                }
+            getAllWishes = wishRepository.getAllWishes().map {wish ->
+                wish.sortedWith(
+                    compareByDescending<Wish> { it.important }
+                        .thenByDescending { it.timestamp }
+                )
             }
         }
     }

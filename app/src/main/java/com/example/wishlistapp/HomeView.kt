@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -28,6 +29,7 @@ import androidx.compose.material.SwipeToDismiss
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.Star
 //noinspection UsingMaterialAndMaterial3Libraries
 import androidx.compose.material.rememberDismissState
 import androidx.compose.material3.FloatingActionButton
@@ -154,12 +156,27 @@ fun WishListItem(
         Column(
             modifier = Modifier.padding(16.dp)
         ) {
-            Text(
-                text = wish.title,
-                fontWeight = FontWeight.ExtraBold,
-                color = Color.Black,
-                style = MaterialTheme.typography.titleMedium
-            )
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = wish.title,
+                    fontWeight = FontWeight.ExtraBold,
+                    color = Color.Black,
+                    modifier = Modifier.weight(1f),
+                    style = MaterialTheme.typography.titleMedium
+                )
+                if (wish.important) {
+                    Icon(
+                        imageVector = Icons.Default.Star,
+                        contentDescription = "",
+                        tint = colorResource(R.color.teal_700),
+                        modifier = Modifier.padding(start = 4.dp)
+                    )
+                }
+            }
             Text(
                 text = wish.description,
                 color = Color.Black,
