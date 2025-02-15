@@ -37,7 +37,7 @@ class WishViewModel(
 
     init {
         viewModelScope.launch {
-            getAllWishes = wishRepository.getAllWishes().map {wish ->
+            getAllWishes = wishRepository.getAllWishes().map { wish ->
                 wish.sortedWith(
                     compareByDescending<Wish> { it.important }
                         .thenByDescending { it.timestamp }
