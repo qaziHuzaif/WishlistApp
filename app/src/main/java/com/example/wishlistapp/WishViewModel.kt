@@ -33,7 +33,7 @@ class WishViewModel(
         wishImportantState = newImportant
     }
 
-    lateinit var getAllWishes: Flow<List<Wish>> //= wishRepository.getAllWishes()
+    lateinit var getAllWishes: Flow<List<Wish>>
 
     init {
         viewModelScope.launch {
