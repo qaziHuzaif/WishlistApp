@@ -10,6 +10,7 @@ import com.example.wishlistapp.data.WishRepository
 import com.example.wishlistapp.di.Graph
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 
 class WishViewModel(
@@ -31,7 +32,11 @@ class WishViewModel(
 
     init {
         viewModelScope.launch {
-            getAllWishes = wishRepository.getAllWishes()
+            getAllWishes = wishRepository.getAllWishes().map {
+                it.sortedByDescending { wish ->
+                    wish.id
+                }
+            }
         }
     }
 

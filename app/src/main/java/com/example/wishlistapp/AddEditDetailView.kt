@@ -120,7 +120,7 @@ fun AddEditDetailView(
                                     description = viewModel.wishDescriptionState.trim()
                                 )
                             )
-                            snackMessage.value = "Wish has been updated"
+                            //snackMessage.value = "Wish has been updated"
                         } else {
                             // Add wish
                             viewModel.addWish(
@@ -129,7 +129,7 @@ fun AddEditDetailView(
                                     description = viewModel.wishDescriptionState.trim()
                                 )
                             )
-                            snackMessage.value = "Wish has been created"
+                            //snackMessage.value = "Wish has been created"
                         }
                         navController.navigateUp()
                     } else {

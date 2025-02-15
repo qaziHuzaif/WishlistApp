@@ -32,6 +32,7 @@ import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.rememberDismissState
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -156,11 +157,13 @@ fun WishListItem(
             Text(
                 text = wish.title,
                 fontWeight = FontWeight.ExtraBold,
-                color = Color.Black
+                color = Color.Black,
+                style = MaterialTheme.typography.titleMedium
             )
             Text(
                 text = wish.description,
-                color = Color.Black
+                color = Color.Black,
+                style = MaterialTheme.typography.bodyMedium
             )
         }
     }
