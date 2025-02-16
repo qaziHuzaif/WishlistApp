@@ -39,7 +39,6 @@ Wishlist App is a modern Android application designed to simplify the process of
 1. **Clone the repository:**  
    ```
    https://github.com/qaziHuzaif/WishlistApp.git
-
 3.  **Open in Android Studio:**
     *   Open Android Studio and select "Open an Existing Project."
     *   Navigate to the cloned repository and select the root directory.
