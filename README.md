@@ -21,6 +21,10 @@ Wishlist App is a modern Android application designed to simplify the process of
 *   **Room Database:** For storing data locally, ensuring fast and reliable access to your wishlists even when offline.
 * **MVVM Architecture:** The app follows the Model-View-ViewModel architecture pattern, ensuring separation of concerns and maintainability of code.
 
+
+![SVG Image](https://raw.githubusercontent.com/qaziHuzaif/WishlistApp/c947d851abe491b77a73fd65fe3962ddaa179603/Wishlist%20App.svg?token=BI7FBCBPVJBYI7MPFPBWNA3HWHXNS)
+
+
 ## Benefits
 
 *   **Organization:** Keep all your desired items in one organized place.
@@ -32,14 +36,15 @@ Wishlist App is a modern Android application designed to simplify the process of
 
 ## Getting Started
 
-1.  **Clone the repository:**
-2.      https://github.com/qaziHuzaif/WishlistApp.git
+1. **Clone the repository:**  
+   ```
+   https://github.com/qaziHuzaif/WishlistApp.git
 
-2.  **Open in Android Studio:**
+3.  **Open in Android Studio:**
     *   Open Android Studio and select "Open an Existing Project."
     *   Navigate to the cloned repository and select the root directory.
 
-3.  **Build and Run:**
+4.  **Build and Run:**
     *   Connect an Android device or start an emulator.
     *   Click the "Run" button in Android Studio to build and run the app.
 
