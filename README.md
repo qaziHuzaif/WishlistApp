@@ -22,7 +22,7 @@ Wishlist App is a modern Android application designed to simplify the process of
 * **MVVM Architecture:** The app follows the Model-View-ViewModel architecture pattern, ensuring separation of concerns and maintainability of code.
 
 
-![SVG Image](https://raw.githubusercontent.com/qaziHuzaif/WishlistApp/c947d851abe491b77a73fd65fe3962ddaa179603/Wishlist%20App.svg?token=BI7FBCBPVJBYI7MPFPBWNA3HWHXNS)
+![SVG Image](https://raw.githubusercontent.com/qaziHuzaif/WishlistApp/d39865776d4d5b252c302a6c6034f8762fe000b0/Wishlist%20App.svg)
 
 
 ## Benefits
